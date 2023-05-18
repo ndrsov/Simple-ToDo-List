@@ -12,6 +12,24 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <main>
+      <div class="app">
+        <header>
+          <h1>Your ToDo's</h1>
+          <button id="create"></button>
+        </header>
+        <div class="todol-list" id="list">
+          <div class="item">
+            <input type="checkbox" />
+            <input type="text" value="ToDo content goes here" disabled />
+            <div class="actions">
+              <button class="material-icons">edit</button>
+              <button class="material-icons remove-btn">remove_circle</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
