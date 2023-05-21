@@ -95,3 +95,22 @@ main {
 .item:focus-within {
   outline: 2px solid #fff;
 }
+
+.actions button {
+  color: #ccc;
+  margin-right: 1rem;
+  opacity: 0.8;
+  transition: 0.1s;
+}
+
+.actions button.remove-btn {
+  color: crimson;
+}
+
+.actions button:hover {
+  opacity: 1;
+}
+
+.actions button:last-of-type {
+  margin-right: 0;
+}
