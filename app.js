@@ -23,3 +23,43 @@ function createNewTodo() {
 
   //Save();
 }
+
+{
+  /* <div class="item">
+            <input type="checkbox" />
+            <input type="text" value="ToDo content goes here" disabled />
+            <div class="actions">
+              <button class="material-icons">edit</button>
+              <button class="material-icons remove-btn">remove_circle</button>
+            </div>
+          </div> */
+}
+
+function createTodoEl(item) {
+  const itemEl = document.createElement('div');
+  itemEl.classList.add('add');
+
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.checked = item.complete;
+
+  if (item.complete) {
+    itemEl.classList.add('complete');
+  }
+
+  const inputEl = document.createElement('input');
+  inputEl.type = 'text';
+  inputEl.value = item.text;
+  inputEl.setAttribute('disabled', '');
+
+  const actionsEl = document.createElement('div');
+  actionsEl.classList.add('actions');
+
+  const editBtnEl = document.createElement('button');
+  editBtnEl.classList.add('material-icons');
+  editBtnEl.innerText = 'edit';
+
+  const removeBtnEl = document.createElement('button');
+  removeBtnEl.classList.add('material-icons', 'remove-btn');
+  removeBtnEl.innerText = 'remove_circle';
+}
