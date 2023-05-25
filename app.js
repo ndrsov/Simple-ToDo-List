@@ -62,4 +62,11 @@ function createTodoEl(item) {
   const removeBtnEl = document.createElement('button');
   removeBtnEl.classList.add('material-icons', 'remove-btn');
   removeBtnEl.innerText = 'remove_circle';
+
+  actionsEl.append(editBtnEl);
+  actionsEl.append(removeBtnEl);
+
+  itemEl.append(checkbox);
+  itemEl.append(inputEl);
+  itemEl.append(actionsEl);
 }
