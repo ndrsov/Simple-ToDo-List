@@ -69,4 +69,22 @@ function createTodoEl(item) {
   itemEl.append(checkbox);
   itemEl.append(inputEl);
   itemEl.append(actionsEl);
+
+  // Events
+
+  checkbox.addEventListener('change', () => {
+    item.complete = checkbox.checked;
+
+    if (item.complete) {
+      itemEl.classList.add('complete');
+    } else {
+      itemEl.classList.remove('complete');
+    }
+
+    Save();
+  });
+}
+
+function Save() {
+  // Save totos
 }
