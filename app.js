@@ -21,7 +21,7 @@ function createNewTodo() {
   inputEl.removeAttribute('disabled');
   inputEl.focus();
 
-  //Save();
+  Save();
 }
 
 {
@@ -86,5 +86,5 @@ function createTodoEl(item) {
 }
 
 function Save() {
-  // Save totos
+  // Save todos
 }
