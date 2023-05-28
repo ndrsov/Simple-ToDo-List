@@ -83,6 +83,10 @@ function createTodoEl(item) {
 
     Save();
   });
+
+  inputEl.addEventListener('input', () => {
+    item.text = inputEl.value;
+  });
 }
 
 function Save() {
