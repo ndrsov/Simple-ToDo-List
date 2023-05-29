@@ -87,6 +87,26 @@ function createTodoEl(item) {
   inputEl.addEventListener('input', () => {
     item.text = inputEl.value;
   });
+
+  inputEl.addEventListener('blur', () => {
+    inputEl.setAttribute('disabled', '');
+    Save();
+  });
+
+  editBtnEl.addEventListener('click', () => {
+    inputEl.removeAttribute('disabled', '');
+    inputEl.focus();
+  });
+
+  removeBtnEl.addEventListener('click', () => {
+    todos = todos.filter((t) => t.id != item.id);
+
+    itemEl.remove();
+
+    Save();
+  });
+
+  return { itemEl, inputEl, editBtnEl, removeBtnEl };
 }
 
 function Save() {
