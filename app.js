@@ -110,5 +110,6 @@ function createTodoEl(item) {
 }
 
 function Save() {
-  // Save todos
+  const save = JSON.stringify(todos);
+  localStorage.setItem('tasks', save);
 }
