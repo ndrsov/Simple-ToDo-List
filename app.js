@@ -37,7 +37,7 @@ function createNewTodo() {
 
 function createTodoEl(item) {
   const itemEl = document.createElement('div');
-  itemEl.classList.add('add');
+  itemEl.classList.add('item');
 
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
