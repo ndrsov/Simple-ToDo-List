@@ -109,7 +109,26 @@ function createTodoEl(item) {
   return { itemEl, inputEl, editBtnEl, removeBtnEl };
 }
 
+function displayTodos() {
+  Load();
+  for (let i = 0; i < todos.length; i++) {
+    const item = todos[i];
+    const { itemEl } = createTodoEl(item);
+
+    listEl.append(itemEl);
+  }
+}
+
+displayTodos();
+
 function Save() {
   const save = JSON.stringify(todos);
   localStorage.setItem('tasks', save);
+}
+
+function Load() {
+  const data = localStorage.getItem('tasks');
+  if (data) {
+    todos = JSON.parse(data);
+  }
 }
